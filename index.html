@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Xpeng Smart Select 4.0 · FI 智能助手</title>
 <meta name="description" content="小鹏智选 4.0 FI 智能助手：规则引擎判定 + 知识库检索 + 视觉模型理解，为区域金融经理（FI）提供可解释、可追溯、可降级的分期方案建议。" />
-<meta name="theme-color" content="#07080A" />
+<meta name="theme-color" content="#F7F6F3" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Xpeng Smart Select 4.0" />
 <meta property="og:title" content="Xpeng Smart Select 4.0 · FI 智能助手" />
@@ -17,11 +17,11 @@
   // 仅在 JS 可用时才隐藏待揭示元素，避免无脚本环境白屏
   document.documentElement.classList.add('js');
   // 主题固定为深色（产品定位），不跟随系统，保证视觉一致
-  document.documentElement.style.colorScheme = 'dark';
+  document.documentElement.style.colorScheme = 'light';
 </script>
 </head>
 
-<body class="bg-ink-950 text-fg font-sans antialiased">
+<body class="bg-canvas text-ink font-sans antialiased">
 
 <!-- ══════════════ 氛围层：gradient mesh / 3D / noise ══════════════ -->
 <div class="mesh" aria-hidden="true"></div>
@@ -35,15 +35,15 @@
   <nav class="surface-strong border-x-0 border-t-0 rounded-none border-b border-line">
     <div class="shell flex h-14 items-center justify-between gap-4">
       <a href="#top" class="group flex items-center gap-2.5 no-underline">
-        <span class="relative grid h-7 w-7 place-items-center rounded-[9px] border border-line bg-white/[0.04]">
+        <span class="relative grid h-7 w-7 place-items-center rounded-[9px] border border-line bg-ink/[0.04]">
           <svg viewBox="0 0 32 32" class="h-4 w-4" aria-hidden="true">
             <path d="M9 21.5 16 8l7 13.5" fill="none" stroke="currentColor" stroke-width="2.6"
                   stroke-linecap="round" stroke-linejoin="round" class="text-accent" />
           </svg>
         </span>
         <span class="flex flex-col leading-none">
-          <span class="text-[13px] font-semibold tracking-tight">Xpeng Smart Select <span class="num text-accent-soft">4.0</span></span>
-          <span class="mt-0.5 text-[10.5px] text-fg-dim">FI 智能助手 · 分期决策控制台</span>
+          <span class="text-[13px] font-semibold tracking-tight">Xpeng Smart Select <span class="num text-accent-deep">4.0</span></span>
+          <span class="mt-0.5 text-[10.5px] text-ink-faint">FI 智能助手 · 分期决策控制台</span>
         </span>
       </a>
 
@@ -77,14 +77,14 @@
 
         <h1 data-reveal class="text-balance text-[34px] font-semibold leading-[1.12] tracking-[-0.02em] sm:text-[44px] lg:text-[52px]">
           让每一次分期推荐<br />
-          <span class="bg-gradient-to-br from-white via-white to-accent-soft/70 bg-clip-text text-transparent">都可解释、可追溯</span>
+          <span class="bg-gradient-to-br from-ink via-ink to-accent bg-clip-text text-transparent">都可解释、可追溯</span>
         </h1>
 
-        <p data-reveal class="mt-5 max-w-xl text-[15px] leading-relaxed text-fg-muted">
+        <p data-reveal class="mt-5 max-w-xl text-[15px] leading-relaxed text-ink-soft">
           小鹏「智选」分期已实现 93.8% 订单自动分流，但 FI 的使命是
-          <span class="text-fg">保证客户顺利分期、不流失</span>。
+          <span class="text-ink">保证客户顺利分期、不流失</span>。
           这款助手把政策问答、方案匹配、流程跟进收拢进一个对话窗口——
-          <span class="text-fg">判定永远走规则，LLM 只做理解</span>，每条结论都带来源。
+          <span class="text-ink">判定永远走规则，LLM 只做理解</span>，每条结论都带来源。
         </p>
 
         <div data-reveal class="mt-8 flex flex-wrap items-center gap-2.5">
@@ -101,20 +101,20 @@
         <!-- 关键指标 -->
         <dl data-reveal class="mt-10 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
           <div>
-            <dt class="text-[11px] text-fg-dim">合作机构</dt>
-            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">13<span class="ml-0.5 text-[12px] font-normal text-fg-dim">家</span></dd>
+            <dt class="text-[11px] text-ink-faint">合作机构</dt>
+            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">13<span class="ml-0.5 text-[12px] font-normal text-ink-faint">家</span></dd>
           </div>
           <div>
-            <dt class="text-[11px] text-fg-dim">结构化规则</dt>
-            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">6<span class="ml-0.5 text-[12px] font-normal text-fg-dim">类</span></dd>
+            <dt class="text-[11px] text-ink-faint">结构化规则</dt>
+            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">6<span class="ml-0.5 text-[12px] font-normal text-ink-faint">类</span></dd>
           </div>
           <div>
-            <dt class="text-[11px] text-fg-dim">一致性断言</dt>
-            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">40<span class="ml-0.5 text-[12px] font-normal text-fg-dim">项</span></dd>
+            <dt class="text-[11px] text-ink-faint">一致性断言</dt>
+            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">40<span class="ml-0.5 text-[12px] font-normal text-ink-faint">项</span></dd>
           </div>
           <div>
-            <dt class="text-[11px] text-fg-dim">编造运营数据</dt>
-            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">0<span class="ml-0.5 text-[12px] font-normal text-fg-dim">条</span></dd>
+            <dt class="text-[11px] text-ink-faint">编造运营数据</dt>
+            <dd class="num mt-1 text-[22px] font-semibold tracking-tight">0<span class="ml-0.5 text-[12px] font-normal text-ink-faint">条</span></dd>
           </div>
         </dl>
       </div>
@@ -124,10 +124,10 @@
         <div id="hero-preview" class="surface sheen overflow-hidden p-0">
           <div class="flex items-center justify-between border-b border-line px-4 py-2.5">
             <div class="flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full bg-white/15"></span>
-              <span class="h-2 w-2 rounded-full bg-white/15"></span>
-              <span class="h-2 w-2 rounded-full bg-white/15"></span>
-              <span class="ml-2 text-[11.5px] text-fg-dim">样例问询 · 42岁港澳台客户</span>
+              <span class="h-2 w-2 rounded-full bg-ink/15"></span>
+              <span class="h-2 w-2 rounded-full bg-ink/15"></span>
+              <span class="h-2 w-2 rounded-full bg-ink/15"></span>
+              <span class="ml-2 text-[11.5px] text-ink-faint">样例问询 · 42岁港澳台客户</span>
             </div>
             <span class="chip !h-[22px] !text-[10.5px]">真实规则计算</span>
           </div>
@@ -142,8 +142,8 @@
             </div>
           </div>
         </div>
-        <p class="mt-3 px-1 text-[11px] leading-relaxed text-fg-dim">
-          上方案例由页面内规则引擎实时计算，与后端 <code class="font-mono text-[10.5px] text-fg-muted">fi_core</code> 判定同源。
+        <p class="mt-3 px-1 text-[11px] leading-relaxed text-ink-faint">
+          上方案例由页面内规则引擎实时计算，与后端 <code class="font-mono text-[10.5px] text-ink-soft">fi_core</code> 判定同源。
         </p>
       </div>
 
@@ -157,7 +157,7 @@
     <div class="mb-9 max-w-2xl">
       <p data-reveal class="eyebrow">Capabilities</p>
       <h2 data-reveal class="mt-3 text-[26px] font-semibold tracking-[-0.015em] md:text-[32px]">六块能力，一个对话入口</h2>
-      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-fg-muted">
+      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-ink-soft">
         不是一个聊天框套壳大模型。判定、检索、降级各自独立，任何一环失效都不会让 FI 拿到编造的结论。
       </p>
     </div>
@@ -166,10 +166,10 @@
 
       <!-- 主卡：对话式咨询 -->
       <article data-reveal data-tilt class="surface sheen group relative overflow-hidden p-5 md:col-span-7 md:row-span-2 md:p-6">
-        <div class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-accent/[0.09] blur-3xl transition-opacity duration-500 group-hover:opacity-150"></div>
+        <div class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-accent/[0.09] blur-3xl transition-opacity duration-500 group-hover:opacity-100"></div>
         <div class="relative">
           <div class="flex items-center gap-2">
-            <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+            <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
               <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                 <path d="M3 5.5h14M3 10h9M3 14.5h6" stroke-linecap="round" />
               </svg>
@@ -177,19 +177,19 @@
             <h3 class="text-[15px] font-semibold">对话式咨询</h3>
             <span class="chip chip-accent ml-auto !h-[22px] !text-[10.5px]">主入口</span>
           </div>
-          <p class="mt-3.5 text-[13.5px] leading-relaxed text-fg-muted">
+          <p class="mt-3.5 text-[13.5px] leading-relaxed text-ink-soft">
             FI 用自然语言描述客户情况，助手抽取画像 → 跑规则引擎 → 回显画像请 FI 确认 →
-            输出<span class="text-fg">按匹配度排序的机构方案</span>，每条准入理由带章节与行号。
+            输出<span class="text-ink">按匹配度排序的机构方案</span>，每条准入理由带章节与行号。
           </p>
 
           <div class="mt-5 grid gap-2.5 sm:grid-cols-2">
-            <div class="rounded-[10px] border border-line-soft bg-white/[0.02] p-3">
-              <p class="text-[11px] text-fg-dim">方案咨询</p>
-              <p class="mt-1.5 text-[12.5px] leading-relaxed text-fg-muted">年龄 / 期限 / 首付 / 征信 / 资质 / 需求 → 机构匹配</p>
+            <div class="rounded-[10px] border border-line-soft bg-ink/[0.02] p-3">
+              <p class="text-[11px] text-ink-faint">方案咨询</p>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">年龄 / 期限 / 首付 / 征信 / 资质 / 需求 → 机构匹配</p>
             </div>
-            <div class="rounded-[10px] border border-line-soft bg-white/[0.02] p-3">
-              <p class="text-[11px] text-fg-dim">政策问答</p>
-              <p class="mt-1.5 text-[12.5px] leading-relaxed text-fg-muted">结构化规则精确命中 + 原文片段相关度重排</p>
+            <div class="rounded-[10px] border border-line-soft bg-ink/[0.02] p-3">
+              <p class="text-[11px] text-ink-faint">政策问答</p>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">结构化规则精确命中 + 原文片段相关度重排</p>
             </div>
           </div>
 
@@ -205,7 +205,7 @@
       <!-- 规则引擎 -->
       <article data-reveal data-tilt class="surface sheen group p-5 md:col-span-5">
         <div class="flex items-center gap-2">
-          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
             <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <rect x="3.5" y="3.5" width="13" height="13" rx="3" />
               <path d="M7 10h6M10 7v6" stroke-linecap="round" />
@@ -213,22 +213,22 @@
           </span>
           <h3 class="text-[15px] font-semibold">规则引擎判定</h3>
         </div>
-        <p class="mt-3 text-[13px] leading-relaxed text-fg-muted">
-          机构准入用 <span class="text-fg">JSON 规则 DSL</span> 表达：资质、年龄+期限、首付、地区约束逐条判定，
-          <span class="text-fg">每条结论都附判定依据</span>。判定不经过大模型。
+        <p class="mt-3 text-[13px] leading-relaxed text-ink-soft">
+          机构准入用 <span class="text-ink">JSON 规则 DSL</span> 表达：资质、年龄+期限、首付、地区约束逐条判定，
+          <span class="text-ink">每条结论都附判定依据</span>。判定不经过大模型。
         </p>
         <div class="mt-4 grid grid-cols-3 gap-2 text-center">
-          <div class="rounded-[9px] border border-line-soft bg-white/[0.02] py-2.5">
+          <div class="rounded-[9px] border border-line-soft bg-ink/[0.02] py-2.5">
             <p class="num text-[17px] font-semibold">9</p>
-            <p class="mt-0.5 text-[10.5px] text-fg-dim">一类机构</p>
+            <p class="mt-0.5 text-[10.5px] text-ink-faint">一类机构</p>
           </div>
-          <div class="rounded-[9px] border border-line-soft bg-white/[0.02] py-2.5">
+          <div class="rounded-[9px] border border-line-soft bg-ink/[0.02] py-2.5">
             <p class="num text-[17px] font-semibold">4</p>
-            <p class="mt-0.5 text-[10.5px] text-fg-dim">二类承接</p>
+            <p class="mt-0.5 text-[10.5px] text-ink-faint">二类承接</p>
           </div>
-          <div class="rounded-[9px] border border-line-soft bg-white/[0.02] py-2.5">
+          <div class="rounded-[9px] border border-line-soft bg-ink/[0.02] py-2.5">
             <p class="num text-[17px] font-semibold">4</p>
-            <p class="mt-0.5 text-[10.5px] text-fg-dim">特殊资质</p>
+            <p class="mt-0.5 text-[10.5px] text-ink-faint">特殊资质</p>
           </div>
         </div>
       </article>
@@ -236,7 +236,7 @@
       <!-- 知识库问答 -->
       <article data-reveal data-tilt class="surface sheen group p-5 md:col-span-5">
         <div class="flex items-center gap-2">
-          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
             <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path d="M4 4.5h5.5a2 2 0 0 1 2 2V16a1.5 1.5 0 0 0-1.5-1.5H4z" stroke-linejoin="round" />
               <path d="M16 4.5h-5.5a2 2 0 0 0-2 2V16a1.5 1.5 0 0 1 1.5-1.5H16z" stroke-linejoin="round" />
@@ -244,9 +244,9 @@
           </span>
           <h3 class="text-[15px] font-semibold">知识库检索 + 引用</h3>
         </div>
-        <p class="mt-3 text-[13px] leading-relaxed text-fg-muted">
+        <p class="mt-3 text-[13px] leading-relaxed text-ink-soft">
           结构化规则精确命中优先，原文片段按相关度重排补充；答案自带
-          <span class="text-fg">来源章节与行号</span>与置信度，低置信度<span class="text-fg">主动降级</span>。
+          <span class="text-ink">来源章节与行号</span>与置信度，低置信度<span class="text-ink">主动降级</span>。
         </p>
         <div class="mt-4 space-y-2">
           <div class="flex items-center gap-2">
@@ -264,7 +264,7 @@
       <!-- 视觉模型 -->
       <article data-reveal data-tilt class="surface sheen group p-5 md:col-span-4">
         <div class="flex items-center gap-2">
-          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
             <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <rect x="3" y="4.5" width="14" height="11" rx="2.5" />
               <circle cx="8" cy="9" r="1.6" />
@@ -273,16 +273,16 @@
           </span>
           <h3 class="text-[15px] font-semibold">视觉模型读图</h3>
         </div>
-        <p class="mt-3 text-[13px] leading-relaxed text-fg-muted">
+        <p class="mt-3 text-[13px] leading-relaxed text-ink-soft">
           征信 / 订单 / 审批截图交给视觉模型抽取文字与数字，
-          <span class="text-fg">抽取结果需原文回验</span>才能进画像——防幻觉的第一道闸。
+          <span class="text-ink">抽取结果需原文回验</span>才能进画像——防幻觉的第一道闸。
         </p>
       </article>
 
       <!-- Human in the loop -->
       <article data-reveal data-tilt class="surface sheen group p-5 md:col-span-4">
         <div class="flex items-center gap-2">
-          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
             <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <circle cx="10" cy="7" r="2.6" />
               <path d="M4.5 16c1.2-2.6 3.1-3.9 5.5-3.9S14.3 13.4 15.5 16" stroke-linecap="round" />
@@ -290,8 +290,8 @@
           </span>
           <h3 class="text-[15px] font-semibold">Human-in-the-loop</h3>
         </div>
-        <p class="mt-3 text-[13px] leading-relaxed text-fg-muted">
-          只出建议，<span class="text-fg">不操作订单</span>。信息不足时明确追问，
+        <p class="mt-3 text-[13px] leading-relaxed text-ink-soft">
+          只出建议，<span class="text-ink">不操作订单</span>。信息不足时明确追问，
           不确定时坦白「知识库未覆盖，请咨询策略组」——FI 永远是最终决策者。
         </p>
       </article>
@@ -299,7 +299,7 @@
       <!-- 可降级 -->
       <article data-reveal data-tilt class="surface sheen group p-5 md:col-span-4">
         <div class="flex items-center gap-2">
-          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-white/[0.04]">
+          <span class="grid h-8 w-8 place-items-center rounded-[10px] border border-line bg-ink/[0.04]">
             <svg viewBox="0 0 20 20" class="h-4 w-4 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path d="M10 3.5v5.2M10 12.6v.6" stroke-linecap="round" />
               <path d="M4.2 16.2A7.5 7.5 0 1 1 15.8 16.2" stroke-linecap="round" />
@@ -307,9 +307,9 @@
           </span>
           <h3 class="text-[15px] font-semibold">可降级架构</h3>
         </div>
-        <p class="mt-3 text-[13px] leading-relaxed text-fg-muted">
+        <p class="mt-3 text-[13px] leading-relaxed text-ink-soft">
           无 LLM Key 时自动降级为「规则引擎 + 知识库检索」模板回答，
-          <span class="text-fg">功能不缺失，结论仍可追溯</span>。
+          <span class="text-ink">功能不缺失，结论仍可追溯</span>。
         </p>
       </article>
 
@@ -324,9 +324,9 @@
       <div class="max-w-2xl">
         <p data-reveal class="eyebrow">Live Console</p>
         <h2 data-reveal class="mt-3 text-[26px] font-semibold tracking-[-0.015em] md:text-[32px]">实时演示 · 直接问</h2>
-        <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-fg-muted">
-          页面内的规则引擎与后端 <code class="font-mono text-[12.5px] text-fg-muted">fi_core</code> 同源，
-          知识库来自同一份《金融百宝箱》结构化提取。<span class="text-fg">无需后端、无需 Key，全部在浏览器里算。</span>
+        <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-ink-soft">
+          页面内的规则引擎与后端 <code class="font-mono text-[12.5px] text-ink-soft">fi_core</code> 同源，
+          知识库来自同一份《金融百宝箱》结构化提取。<span class="text-ink">无需后端、无需 Key，全部在浏览器里算。</span>
         </p>
       </div>
       <div data-reveal class="flex items-center gap-2">
@@ -339,31 +339,31 @@
 
       <!-- 左侧：场景 -->
       <aside data-reveal class="surface sheen h-fit p-4">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-fg-dim">示例场景</p>
-        <p class="mt-2 text-[11.5px] leading-relaxed text-fg-dim">点一下直接跑，可自由改写。</p>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-faint">示例场景</p>
+        <p class="mt-2 text-[11.5px] leading-relaxed text-ink-faint">点一下直接跑，可自由改写。</p>
         <div id="preset-list" class="mt-3.5 space-y-1.5">
           <!-- JS 渲染 -->
         </div>
 
         <div class="rule my-4"></div>
 
-        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-fg-dim">判定链路</p>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-faint">判定链路</p>
         <ol id="trace-list" class="mt-3 space-y-2.5">
           <li class="flex items-start gap-2.5">
-            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-white/[0.04] text-[9.5px] text-fg-dim">1</span>
-            <span class="text-[12px] leading-snug text-fg-muted">抽取客户画像（正则 + 词表）</span>
+            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-ink/[0.04] text-[9.5px] text-ink-faint">1</span>
+            <span class="text-[12px] leading-snug text-ink-soft">抽取客户画像（正则 + 词表）</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-white/[0.04] text-[9.5px] text-fg-dim">2</span>
-            <span class="text-[12px] leading-snug text-fg-muted">意图路由（方案 / 政策 / 帮助）</span>
+            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-ink/[0.04] text-[9.5px] text-ink-faint">2</span>
+            <span class="text-[12px] leading-snug text-ink-soft">意图路由（方案 / 政策 / 帮助）</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-white/[0.04] text-[9.5px] text-fg-dim">3</span>
-            <span class="text-[12px] leading-snug text-fg-muted">规则引擎准入 + 需求约束</span>
+            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-ink/[0.04] text-[9.5px] text-ink-faint">3</span>
+            <span class="text-[12px] leading-snug text-ink-soft">规则引擎准入 + 需求约束</span>
           </li>
           <li class="flex items-start gap-2.5">
-            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-white/[0.04] text-[9.5px] text-fg-dim">4</span>
-            <span class="text-[12px] leading-snug text-fg-muted">匹配度排序 → 可解释输出</span>
+            <span class="num mt-px grid h-4 w-4 shrink-0 place-items-center rounded-full border border-line bg-ink/[0.04] text-[9.5px] text-ink-faint">4</span>
+            <span class="text-[12px] leading-snug text-ink-soft">匹配度排序 → 可解释输出</span>
           </li>
         </ol>
       </aside>
@@ -374,13 +374,13 @@
         <!-- 对话区 -->
         <div id="chat-scroll" class="flex-1 space-y-5 overflow-y-auto p-4 sm:p-5" style="max-height:min(62vh,680px)">
           <div id="chat-empty" class="flex h-full min-h-[420px] flex-col items-center justify-center px-6 text-center">
-            <span class="grid h-12 w-12 place-items-center rounded-[14px] border border-line bg-white/[0.03]">
-              <svg viewBox="0 0 24 24" class="h-5 w-5 text-fg-dim" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <span class="grid h-12 w-12 place-items-center rounded-[14px] border border-line bg-ink/[0.03]">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-ink-faint" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
                 <path d="M4 6h16M4 12h10M4 18h7" stroke-linecap="round" />
               </svg>
             </span>
             <p class="mt-4 text-[14px] font-medium">还没有对话</p>
-            <p class="mt-1.5 max-w-sm text-[12.5px] leading-relaxed text-fg-dim">
+            <p class="mt-1.5 max-w-sm text-[12.5px] leading-relaxed text-ink-faint">
               描述一个客户情况，或问一条金融政策。<br />推荐结果为规则匹配，非放款承诺。
             </p>
             <div class="mt-5 flex flex-wrap justify-center gap-2">
@@ -393,7 +393,7 @@
         </div>
 
         <!-- 输入区 -->
-        <div class="border-t border-line bg-white/[0.015] p-3 sm:p-4">
+        <div class="border-t border-line bg-ink/[0.015] p-3 sm:p-4">
           <form id="chat-form" class="flex items-end gap-2" autocomplete="off">
             <div class="relative flex-1">
               <input id="chat-input" class="input pr-11" type="text"
@@ -406,7 +406,7 @@
               </svg>
             </button>
           </form>
-          <p class="mt-2 px-0.5 text-[10.5px] leading-relaxed text-fg-dim">
+          <p class="mt-2 px-0.5 text-[10.5px] leading-relaxed text-ink-faint">
             本演示不包含任何模拟运营数据；客户画像由你现场输入，判定结果全部来自真实规则。
           </p>
         </div>
@@ -421,7 +421,7 @@
     <div class="mb-9 max-w-2xl">
       <p data-reveal class="eyebrow">Architecture</p>
       <h2 data-reveal class="mt-3 text-[26px] font-semibold tracking-[-0.015em] md:text-[32px]">一句话：LLM 只做理解，判定永远走规则</h2>
-      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-fg-muted">
+      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-ink-soft">
         这是整个设计里最关键的一条边界。金融场景里，模型的「 plausible 」就是风险；
         所以抽取交给模型，判定交给规则，引用交给知识库。
       </p>
@@ -431,43 +431,43 @@
     <div class="grid gap-3 md:grid-cols-5 md:gap-3">
       <div data-reveal class="surface sheen p-4">
         <div class="flex items-center justify-between">
-          <span class="num text-[11px] text-fg-dim">01</span>
+          <span class="num text-[11px] text-ink-faint">01</span>
           <span class="chip !h-[20px] !text-[10px]">输入</span>
         </div>
         <p class="mt-3 text-[13.5px] font-semibold">自然语言</p>
-        <p class="mt-1.5 text-[12px] leading-relaxed text-fg-dim">FI 描述客户情况或提问，可附带截图。</p>
+        <p class="mt-1.5 text-[12px] leading-relaxed text-ink-faint">FI 描述客户情况或提问，可附带截图。</p>
       </div>
       <div data-reveal class="surface sheen p-4">
         <div class="flex items-center justify-between">
-          <span class="num text-[11px] text-fg-dim">02</span>
+          <span class="num text-[11px] text-ink-faint">02</span>
           <span class="chip !h-[20px] !text-[10px]">理解</span>
         </div>
         <p class="mt-3 text-[13.5px] font-semibold">事实抽取</p>
-        <p class="mt-1.5 text-[12px] leading-relaxed text-fg-dim">正则 + 词表确定性抽取，LLM 兜底且需原文回验。</p>
+        <p class="mt-1.5 text-[12px] leading-relaxed text-ink-faint">正则 + 词表确定性抽取，LLM 兜底且需原文回验。</p>
       </div>
       <div data-reveal class="surface sheen p-4">
         <div class="flex items-center justify-between">
-          <span class="num text-[11px] text-fg-dim">03</span>
+          <span class="num text-[11px] text-ink-faint">03</span>
           <span class="chip !h-[20px] !text-[10px]">路由</span>
         </div>
         <p class="mt-3 text-[13.5px] font-semibold">意图路由</p>
-        <p class="mt-1.5 text-[12px] leading-relaxed text-fg-dim">有客户画像 → 方案咨询；否则 → 政策问答。</p>
+        <p class="mt-1.5 text-[12px] leading-relaxed text-ink-faint">有客户画像 → 方案咨询；否则 → 政策问答。</p>
       </div>
       <div data-reveal class="surface sheen p-4">
         <div class="flex items-center justify-between">
-          <span class="num text-[11px] text-fg-dim">04</span>
+          <span class="num text-[11px] text-ink-faint">04</span>
           <span class="chip chip-accent !h-[20px] !text-[10px]">判定</span>
         </div>
         <p class="mt-3 text-[13.5px] font-semibold">规则引擎</p>
-        <p class="mt-1.5 text-[12px] leading-relaxed text-fg-dim">机构准入 + 需求约束 + 匹配度排序，逐条附依据。</p>
+        <p class="mt-1.5 text-[12px] leading-relaxed text-ink-faint">机构准入 + 需求约束 + 匹配度排序，逐条附依据。</p>
       </div>
       <div data-reveal class="surface sheen p-4">
         <div class="flex items-center justify-between">
-          <span class="num text-[11px] text-fg-dim">05</span>
+          <span class="num text-[11px] text-ink-faint">05</span>
           <span class="chip !h-[20px] !text-[10px]">输出</span>
         </div>
         <p class="mt-3 text-[13.5px] font-semibold">可解释答案</p>
-        <p class="mt-1.5 text-[12px] leading-relaxed text-fg-dim">带来源、带置信度，低置信度主动降级。</p>
+        <p class="mt-1.5 text-[12px] leading-relaxed text-ink-faint">带来源、带置信度，低置信度主动降级。</p>
       </div>
     </div>
 
@@ -475,40 +475,40 @@
     <div class="mt-4 grid gap-3 md:grid-cols-2 md:gap-4">
       <div data-reveal class="surface sheen p-5">
         <div class="flex items-center gap-2">
-          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
           <h3 class="text-[14px] font-semibold">模型可以做什么</h3>
         </div>
         <ul class="mt-3.5 space-y-2">
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>从复杂表述里抽取客户画像（年龄 / 期限 / 首付 / 征信 / 资质 / 需求）</span>
           </li>
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>读取截图中的文字与数字</span>
           </li>
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>把规则输出润色成人话</span>
           </li>
         </ul>
       </div>
       <div data-reveal class="surface sheen p-5">
         <div class="flex items-center gap-2">
-          <span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-rose-500"></span>
           <h3 class="text-[14px] font-semibold">模型绝不能做什么</h3>
         </div>
         <ul class="mt-3.5 space-y-2">
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>编造机构政策</span>
           </li>
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>替代规则引擎做准入判定</span>
           </li>
-          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-fg-muted">
-            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-fg-dim"></span>
+          <li class="flex gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
+            <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ink-faint"></span>
             <span>替代 FI 决策 / 直接操作订单 / 联系客户</span>
           </li>
         </ul>
@@ -523,7 +523,7 @@
     <div class="mb-9 max-w-2xl">
       <p data-reveal class="eyebrow">Data Boundary</p>
       <h2 data-reveal class="mt-3 text-[26px] font-semibold tracking-[-0.015em] md:text-[32px]">哪些是真的，哪些不是</h2>
-      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-fg-muted">
+      <p data-reveal class="mt-3 text-[14.5px] leading-relaxed text-ink-soft">
         「能上线」和「能演示」的分界线，就在这张表上。演示项目最容易失分的地方，
         是把编造的运营数据包装成产品能力。
       </p>
@@ -534,31 +534,31 @@
         <table class="w-full border-collapse text-left">
           <thead>
             <tr class="border-b border-line">
-              <th class="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-fg-dim sm:px-5">内容</th>
-              <th class="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-fg-dim sm:px-5">真实性</th>
-              <th class="hidden px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-fg-dim sm:px-5 md:table-cell">说明</th>
+              <th class="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-faint sm:px-5">内容</th>
+              <th class="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-faint sm:px-5">真实性</th>
+              <th class="hidden px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-faint sm:px-5 md:table-cell">说明</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-line-soft">
-            <tr class="transition-colors duration-200 hover:bg-white/[0.02]">
+            <tr class="transition-colors duration-200 hover:bg-ink/[0.02]">
               <td class="px-4 py-3.5 text-[13px] sm:px-5">机构准入 / 港澳台外籍 / 营运车 / 刚需标签 / FAQ / 8月政策</td>
               <td class="px-4 py-3.5 sm:px-5"><span class="chip chip-accent !text-[10.5px]">真实</span></td>
-              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-fg-muted md:table-cell sm:px-5">人工从飞书《金融百宝箱》逐条提取，每条带来源行号，只读。</td>
+              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-ink-soft md:table-cell sm:px-5">人工从飞书《金融百宝箱》逐条提取，每条带来源行号，只读。</td>
             </tr>
-            <tr class="transition-colors duration-200 hover:bg-white/[0.02]">
+            <tr class="transition-colors duration-200 hover:bg-ink/[0.02]">
               <td class="px-4 py-3.5 text-[13px] sm:px-5">业务口径（如审批时效 12 小时内）</td>
               <td class="px-4 py-3.5 sm:px-5"><span class="chip chip-accent !text-[10.5px]">真实</span></td>
-              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-fg-muted md:table-cell sm:px-5">需求方（业务）确认，代码中已标注来源。</td>
+              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-ink-soft md:table-cell sm:px-5">需求方（业务）确认，代码中已标注来源。</td>
             </tr>
-            <tr class="transition-colors duration-200 hover:bg-white/[0.02]">
+            <tr class="transition-colors duration-200 hover:bg-ink/[0.02]">
               <td class="px-4 py-3.5 text-[13px] sm:px-5">匹配度评分（0~1）</td>
               <td class="px-4 py-3.5 sm:px-5"><span class="chip !text-[10.5px]">规则计算</span></td>
-              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-fg-muted md:table-cell sm:px-5">资质 / 需求 / 征信 / 年龄 / 首付 加权，非历史通过率预测；生产可插拔 XGBoost，只换评分器不改流程。</td>
+              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-ink-soft md:table-cell sm:px-5">资质 / 需求 / 征信 / 年龄 / 首付 加权，非历史通过率预测；生产可插拔 XGBoost，只换评分器不改流程。</td>
             </tr>
-            <tr class="transition-colors duration-200 hover:bg-white/[0.02]">
+            <tr class="transition-colors duration-200 hover:bg-ink/[0.02]">
               <td class="px-4 py-3.5 text-[13px] sm:px-5">订单池 / FI 名单 / SLA 天数 / 客户经理等运营数据</td>
-              <td class="px-4 py-3.5 sm:px-5"><span class="chip !border-rose-400/30 !bg-rose-400/10 !text-[10.5px] !text-rose-300">不做不编</span></td>
-              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-fg-muted md:table-cell sm:px-5">本演示不含任何模拟运营数据；客户画像由使用者现场输入。</td>
+              <td class="px-4 py-3.5 sm:px-5"><span class="chip !border-rose-500/35 !bg-rose-500/10 !text-[10.5px] !text-rose-700">不做不编</span></td>
+              <td class="hidden px-4 py-3.5 text-[12.5px] leading-relaxed text-ink-soft md:table-cell sm:px-5">本演示不含任何模拟运营数据；客户画像由使用者现场输入。</td>
             </tr>
           </tbody>
         </table>
@@ -567,19 +567,19 @@
 
     <div data-reveal class="mt-4 grid gap-3 md:grid-cols-3 md:gap-4">
       <div class="surface sheen p-5">
-        <p class="text-[11px] text-fg-dim">可验证</p>
+        <p class="text-[11px] text-ink-faint">可验证</p>
         <p class="mt-1.5 text-[13.5px] font-semibold">规则可核可证</p>
-        <p class="mt-2 text-[12.5px] leading-relaxed text-fg-muted">每条准入结论都能回查到《金融百宝箱》的章节与行号。</p>
+        <p class="mt-2 text-[12.5px] leading-relaxed text-ink-soft">每条准入结论都能回查到《金融百宝箱》的章节与行号。</p>
       </div>
       <div class="surface sheen p-5">
-        <p class="text-[11px] text-fg-dim">可解释</p>
+        <p class="text-[11px] text-ink-faint">可解释</p>
         <p class="mt-1.5 text-[13.5px] font-semibold">判定留痕</p>
-        <p class="mt-2 text-[12.5px] leading-relaxed text-fg-muted">不只是给结论，还给出「为什么」——每条理由独立可审。</p>
+        <p class="mt-2 text-[12.5px] leading-relaxed text-ink-soft">不只是给结论，还给出「为什么」——每条理由独立可审。</p>
       </div>
       <div class="surface sheen p-5">
-        <p class="text-[11px] text-fg-dim">可插拔</p>
+        <p class="text-[11px] text-ink-faint">可插拔</p>
         <p class="mt-1.5 text-[13.5px] font-semibold">评分器可替换</p>
-        <p class="mt-2 text-[12.5px] leading-relaxed text-fg-muted">启发式评分 → XGBoost 只需实现同名接口，判定流程零改动。</p>
+        <p class="mt-2 text-[12.5px] leading-relaxed text-ink-soft">启发式评分 → XGBoost 只需实现同名接口，判定流程零改动。</p>
       </div>
     </div>
   </section>
@@ -591,7 +591,7 @@
   <div class="shell flex flex-col gap-5 py-9 sm:flex-row sm:items-start sm:justify-between">
     <div class="max-w-xl">
       <div class="flex items-center gap-2.5">
-        <span class="grid h-6 w-6 place-items-center rounded-[8px] border border-line bg-white/[0.04]">
+        <span class="grid h-6 w-6 place-items-center rounded-[8px] border border-line bg-ink/[0.04]">
           <svg viewBox="0 0 32 32" class="h-3.5 w-3.5" aria-hidden="true">
             <path d="M9 21.5 16 8l7 13.5" fill="none" stroke="currentColor" stroke-width="2.6"
                   stroke-linecap="round" stroke-linejoin="round" class="text-accent" />
@@ -599,7 +599,7 @@
         </span>
         <span class="text-[12.5px] font-semibold">Xpeng Smart Select 4.0</span>
       </div>
-      <p class="mt-3 text-[11.5px] leading-relaxed text-fg-dim">
+      <p class="mt-3 text-[11.5px] leading-relaxed text-ink-faint">
         FI 智能助手 · 个人独立项目 Demo。知识与规则来自《金融百宝箱》人工结构化提取；
         推荐结果为规则匹配，非放款承诺，最终以机构审批与现场政策为准。
       </p>
@@ -614,7 +614,7 @@
 
 <!-- ══════════════ Modal：原文来源 ══════════════ -->
 <div id="modal" class="fixed inset-0 z-[60] hidden">
-  <div id="modal-backdrop" class="absolute inset-0 bg-black/65 backdrop-blur-sm"></div>
+  <div id="modal-backdrop" class="absolute inset-0 bg-ink/50 backdrop-blur-sm"></div>
   <div class="absolute inset-0 grid place-items-center p-4">
     <div id="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"
          class="surface surface-strong w-full max-w-2xl overflow-hidden p-0">
