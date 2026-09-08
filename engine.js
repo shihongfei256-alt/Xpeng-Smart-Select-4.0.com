@@ -65,7 +65,7 @@
     },
     B: {
       label: '征信一般（含白户）',
-      note: '多数机构可正常进件；中信要求「非白户」、浦发「白户需人工复核」，其余机构以审批为准（§十二 准入材料）',
+      note: '多数机构可正常进件；岚山要求「非白户」、浦江「白户需人工复核」，其余机构以审批为准（§十二 准入材料）',
     },
     C: {
       label: '征信有瑕疵',
@@ -104,9 +104,9 @@
   ];
 
   var KEYWORDS = [
-    '小鹏融租', '小鹏金融', '中国银行', '中行', '建设银行', '建行', '中信银行', '中信',
-    '民生银行', '民生', '平安银行', '平安', '招商银行', '招行', '交通银行', '交行',
-    '浦发银行', '浦发', '华夏东亚', '易鑫', '平安租赁', '天下达',
+    '星驰融租', '星驰金融', '恒岳银行', '恒岳', '云汉银行', '云汉', '岚山银行', '岚山',
+    '民汇银行', '民汇', '安澜银行', '安澜', '招澜银行', '招澜', '交远银行', '交远',
+    '浦江银行', '浦江', '华澜东亚', '易达融租', '安泰租赁', '天远',
     '港澳台', '香港', '澳门', '台湾', '外籍', '公牌', '营运车', '网约车', '公司牌',
     '免抵押', '抵押', '提前还款', '提前结清', '等本等息', '等额本息', '主贷分离',
     '征信瑕疵', '征信', '低利率', '0息', '低息', '3免2', '5免3', '5050', '轻松购',
@@ -214,7 +214,7 @@
 
     if (/公司|企业|公牌|公司牌|以公司名义/.test(text)) facts.plate_type = '公司';
 
-    m = text.match(/(20\d{2}\s*款|新\s*款?)?\s*(G[679X]|P7\+?|M03|L03|X9)/);
+    m = text.match(/(20\d{2}\s*款|新\s*款?)?\s*(星驰)?\s*(S[3579]|GT|M[39]|L3)/);
     if (m) facts.model = ((m[1] || '') + m[2]).replace(/\s/g, '');
 
     for (var i = 0; i < NEED_MAP.length; i++) {
@@ -307,7 +307,7 @@
         var parts = [model + ' 在贴息车型表内（0首付起、融资5万起），可享 ' + (p.plan_0_rate || '')];
         var alt = p.plan_3free2 || p.plan_5free3 || '';
         if (alt) parts.push('另有 ' + alt);
-        parts.push('（小鹏贴息，来源：§二 8月金融政策）');
+        parts.push('（星驰贴息，来源：§二 8月金融政策）');
         return parts.join('；');
       }
     }
@@ -350,10 +350,10 @@
           match_info: matchInfo,
         };
       }
-      if (order.plate_type === '公司' && inst.key !== 'huaxia_dongya') {
+      if (order.plate_type === '公司' && inst.key !== 'hualan_dongya') {
         return {
           eligible: false,
-          reasons: [inst.name + ' 营运车产品仅适用个人客户，公司购车仅华夏东亚可承接（来源：§十）'],
+          reasons: [inst.name + ' 营运车产品仅适用个人客户，公司购车仅华澜东亚可承接（来源：§十）'],
           max_term: null,
           match_info: matchInfo,
         };
@@ -376,9 +376,9 @@
         };
       }
       reasons.push(inst.name + ' 受理公牌（来源：§一 汇总对比表）');
-      if (inst.key === 'xiaopeng_rongzu') {
+      if (inst.key === 'xingchi_rongzu') {
         matchInfo.extra_notes.push(
-          '小鹏融租公牌：最多两台，上牌人为公司，需工商公示的法人/股东/监事做共同申请人（§十二）'
+          '星驰融租公牌：最多两台，上牌人为公司，需工商公示的法人/股东/监事做共同申请人（§十二）'
         );
       }
     }
@@ -423,7 +423,7 @@
     var maxTermMonths = Math.min(60, Math.floor((limit - (age === null || age === undefined ? 30 : age)) * 12));
     if (age !== null && age !== undefined && termYears > limit - age) {
       var extra = '';
-      if (inst.key === 'xiaopeng_rongzu' && age + termYears > 68) {
+      if (inst.key === 'xingchi_rongzu' && age + termYears > 68) {
         extra = '；且年龄+期限超68周岁需添加直系亲属作为共同申请人';
       }
       return {
@@ -442,8 +442,8 @@
         '年龄 ' + age + ' 岁 + 期限 ' + term + ' 期（' + Math.round(termYears) + ' 年）满足 ' +
         inst.name + ' 要求（上限 ' + limit + ' 周岁，来源：§十二）'
       );
-      if (inst.key === 'xiaopeng_rongzu' && age + termYears > 68) {
-        matchInfo.extra_notes.push('小鹏融租：年龄+期限超68周岁需添加直系亲属作为共同申请人（§十二）');
+      if (inst.key === 'xingchi_rongzu' && age + termYears > 68) {
+        matchInfo.extra_notes.push('星驰融租：年龄+期限超68周岁需添加直系亲属作为共同申请人（§十二）');
       }
     }
     matchInfo.max_term = maxTermMonths;
@@ -517,7 +517,7 @@
     return needs;
   }
 
-  /** 刚需标签支持条目里的机构名是否覆盖目标机构（如 '小鹏融租/中信/平安（0息产品）'）。 */
+  /** 刚需标签支持条目里的机构名是否覆盖目标机构（如 '星驰融租/岚山/安澜（0息产品）'）。 */
   function needEntryMatches(entry, instName) {
     var text = entry.institution || '';
     if (instName && text.indexOf(instName) >= 0) return true;
@@ -565,12 +565,12 @@
       return name.indexOf(rt) >= 0 ? [0.0, '客户明确拒绝 ' + rt] : [1.0, '未被客户拒绝'];
     }
     if (ntype === '低利率' || ntype === '0息') {
-      var free3 = ['中国银行', '平安银行', '招商银行', '浦发银行', '小鹏融租', '中信银行'];
+      var free3 = ['恒岳银行', '安澜银行', '招澜银行', '浦江银行', '星驰融租', '岚山银行'];
       if (free3.indexOf(name) >= 0) {
         return [1.0, '可做 0息/低息/3免2/5免3 贴息产品（来源：§二 3免2及5免3注意事项）'];
       }
-      if (name === '易鑫') {
-        return [0.8, '易鑫 3免2/5免3 费率与一类机构一致，用于承接一类机构拒绝客户（§二）'];
+      if (name === '易达融租') {
+        return [0.8, '易达融租 3免2/5免3 费率与一类机构一致，用于承接一类机构拒绝客户（§二）'];
       }
       return [0.3, '未检索到该机构贴息产品，以实际政策为准'];
     }
@@ -860,7 +860,7 @@
     return contentLen(text) >= 12;
   }
 
-  /** 在《金融百宝箱》原文片段上做相关性检索（等价于后端向量检索的重排环节）。 */
+  /** 在《金融顾问手册》原文片段上做相关性检索（等价于后端向量检索的重排环节）。 */
   function retrieve(q, top) {
     top = top || 3;
     var doc = KB.doc;
@@ -908,7 +908,7 @@
         results.push({
           title: faq.question,
           body: faq.answer,
-          source: '金融百宝箱 §十三 常见问题解答',
+          source: '金融顾问手册 §十三 常见问题解答',
           score: Math.min(1.0, 0.68 + 0.16 * hits.length),
           topic: 'FAQ：' + faq.question,
         });
@@ -927,7 +927,7 @@
           body: hmt.summary || '',
           bullets: bullets,
           notes: hmt.special_notes || [],
-          source: '金融百宝箱 §十一 港澳台/外籍客户指引',
+          source: '金融顾问手册 §十一 港澳台/外籍客户指引',
           score: 0.9,
           topic: '港澳台/外籍客户指引',
         });
@@ -950,7 +950,7 @@
           body: com.summary || '',
           bullets: cbullets,
           notes: [],
-          source: '金融百宝箱 §十 营运车分期产品',
+          source: '金融顾问手册 §十 营运车分期产品',
           score: 0.9,
           topic: '营运车分期产品',
         });
@@ -978,7 +978,7 @@
             body: found.description || '',
             bullets: tbullets,
             notes: [],
-            source: '金融百宝箱 §六 客户刚需标签',
+            source: '金融顾问手册 §六 客户刚需标签',
             score: 0.85,
             topic: '刚需标签：' + found.name,
           });
@@ -1003,7 +1003,7 @@
         body: '',
         bullets: ibullets,
         notes: inst.special_notes || [],
-        source: '金融百宝箱 §十二 机构详解（' + inst.name + '）',
+        source: '金融顾问手册 §十二 机构详解（' + inst.name + '）',
         score: 0.85,
         topic: '机构详解：' + inst.name,
       });
@@ -1024,7 +1024,7 @@
           pbullets.push({ label: p.models, text: lines.join('　·　') });
         });
         var pnotes = [
-          '标准费率：12-60期 年费率 2.49%（GX/新P7/G7/G6/G9/26款P7+）或 2.79%（L03/M03/P7+/X9）。',
+          '标准费率：12-60期 年费率 2.99%（GT/星驰S7/S5/S3/S9/26款S7）或 3.29%（L3/M3/S7/M9）。',
           '5050轻松购：50%首付、12/24期、4.57%-5.26%。',
           prod.free3_free5_note || '',
         ];
@@ -1034,14 +1034,14 @@
           body: '',
           bullets: pbullets,
           notes: pnotes.filter(Boolean),
-          source: '金融百宝箱 §二 8月金融政策',
+          source: '金融顾问手册 §二 8月金融政策',
           score: 0.85,
           topic: '8月金融政策',
         });
       }
     }
 
-    // 二类机构承接（§一 二类机构汇总 + §二 易鑫承接）
+    // 二类机构承接（§一 二类机构汇总 + §二 易达融租承接）
     if (q.indexOf('二类') >= 0 || q.indexOf('承接') >= 0 || /被.{0,10}(拒|驳)|驳回/.test(q)) {
       var sec = allInstitutions().filter(function (x) { return x.tier === 2; });
       var sbullets = sec.map(function (x) {
@@ -1049,13 +1049,13 @@
       });
       results.push({
         title: '二类机构承接指南（§一 / §二）',
-        body: '一类机构被拒 / 智选不通过时，可承接的二类机构共 4 家：华夏东亚、易鑫、平安租赁、天下达直租。',
+        body: '一类机构被拒 / 智选不通过时，可承接的二类机构共 4 家：华澜东亚、易达融租、安泰租赁、天远直租。',
         bullets: sbullets,
         notes: [
-          '易鑫 的 3免2 / 5免3 产品车型对应费率与一类机构完全一致，专门用于承接一类机构拒绝的客户（来源：§二）。',
-          '承接选择还要看客户资质：港澳台/外籍仅「华夏东亚」承接（最低首付15%）；营运车由华夏东亚 / 易鑫 / 平安租赁承接（天下达不接营运车）。',
+          '易达融租 的 3免2 / 5免3 产品车型对应费率与一类机构完全一致，专门用于承接一类机构拒绝的客户（来源：§二）。',
+          '承接选择还要看客户资质：港澳台/外籍仅「华澜东亚」承接（最低首付15%）；营运车由华澜东亚 / 易达融租 / 安泰租赁承接（天远不接营运车）。',
         ],
-        source: '金融百宝箱 §一 二类机构汇总对比表（L305-331）＋ §二 易鑫承接（L450）',
+        source: '金融顾问手册 §一 二类机构汇总对比表（L305-331）＋ §二 易达融租承接（L450）',
         score: 0.9,
         topic: '二类机构承接',
       });
@@ -1073,7 +1073,7 @@
         body: '',
         bullets: fbullets,
         notes: [],
-        source: '金融百宝箱 §一 汇总对比表「是否需要线下面签」',
+        source: '金融顾问手册 §一 汇总对比表「是否需要线下面签」',
         score: 0.9,
         topic: '线下面签',
       });
@@ -1128,7 +1128,7 @@
       if (sources.indexOf(structured[s].source) < 0) sources.push(structured[s].source);
     }
     if (citations.length) {
-      sources.push('原文检索（《金融百宝箱》，经相关度重排）');
+      sources.push('原文检索（《金融顾问手册》，经相关度重排）');
     }
 
     return {

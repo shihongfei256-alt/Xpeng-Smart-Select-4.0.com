@@ -1,5 +1,5 @@
 /* =====================================================================
- * app.js —— Xpeng Smart Select 4.0 · FI 智能助手 控制台交互层
+ * app.js —— SmartSelect 4.0 · FI 智能助手 控制台交互层
  *
  * 职责：
  *   1. 会话编排（输入 → 引擎 → 渲染）
@@ -87,11 +87,11 @@
    * ------------------------------------------------------------------ */
 
   var PRESETS = [
-    { tag: '政策', text: '港澳台客户做平安可以吗？' },
+    { tag: '政策', text: '港澳台客户做安澜可以吗？' },
     { tag: '政策', text: '营运车网约车怎么做分期？' },
     { tag: '方案', text: '42岁港澳台客户，60期，首付25%，征信A，广州，哪家能做？' },
     { tag: '流程', text: '审批一般要多长时间？客户催审批进度怎么办？' },
-    { tag: '方案', text: '客户40岁，36期，首付20%，指定平安银行，拒绝中信银行' },
+    { tag: '方案', text: '客户40岁，36期，首付20%，指定安澜银行，拒绝岚山银行' },
     { tag: '方案', text: '客户想免抵押，广州，35岁，36期，征信B' },
     { tag: '政策', text: '2.79%是年费率还是年利率？' },
     { tag: '边界', text: '今天深圳天气怎么样' },
@@ -192,7 +192,7 @@
   }
 
   /**
-   * 打开「原文来源」弹窗：结构化来源 + 真实《金融百宝箱》片段检索。
+   * 打开「原文来源」弹窗：结构化来源 + 真实《金融顾问手册》片段检索。
    *
    * 检索用多个查询：原始问题 + 命中的机构名。
    * 只用原问题时，2-gram 相关度常把「费率总表」这类泛化片段排到前面；
@@ -225,7 +225,7 @@
 
     if (hits.length) {
       html += '<div><p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-faint">' +
-        '《金融百宝箱》原文片段（相关度重排）</p><div class="space-y-2.5">';
+        '《金融顾问手册》原文片段（相关度重排）</p><div class="space-y-2.5">';
       html += hits.map(function (h) {
         // 片段可能落在文档开头的封面区（尚无章节标题），此时只显示行号
         var where = (h.chunk.chapter ? h.chunk.chapter + ' ' : '') + 'L' + h.chunk.from + '-' + h.chunk.to;
@@ -414,7 +414,7 @@
       '</div>' +
       '<p class="mt-2 text-[10.5px] leading-relaxed text-ink-faint">' +
         (res.degraded ? '未命中结构化规则与原文片段 → 已降级，交由策略组确认。'
-                      : '结构化规则命中，结论可回溯至《金融百宝箱》对应章节。') +
+                      : '结构化规则命中，结论可回溯至《金融顾问手册》对应章节。') +
       '</p>' +
       '</div>';
 
@@ -422,7 +422,7 @@
       html += '<div class="rounded-[12px] border border-amber-500/30 bg-amber-500/[0.07] p-4">' +
         '<p class="text-[13px] font-medium text-amber-800">知识库未覆盖该问题</p>' +
         '<p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">' +
-        '为避免误导，建议您咨询策略组确认。我可回答的范围：机构准入 / 港澳台外籍 / 营运车 / 刚需标签 / 8月金融政策 / 还款与提前结清 / APP 申请指引 / 常见 FAQ，来源为《金融百宝箱》。</p>' +
+        '为避免误导，建议您咨询策略组确认。我可回答的范围：机构准入 / 港澳台外籍 / 营运车 / 刚需标签 / 8月金融政策 / 还款与提前结清 / APP 申请指引 / 常见 FAQ，来源为《金融顾问手册》。</p>' +
         '</div>';
     }
 
@@ -468,7 +468,7 @@
       '<button type="button" class="btn btn-sm" data-copy="1">复制结论摘要</button>' +
       '</div>';
 
-    html += '<p class="text-[10.5px] leading-relaxed text-ink-faint">免责：以上来源《金融百宝箱》，具体准入以客户实际情况与机构审批为准。</p>';
+    html += '<p class="text-[10.5px] leading-relaxed text-ink-faint">免责：以上来源《金融顾问手册》，具体准入以客户实际情况与机构审批为准。</p>';
 
     return html;
   }
@@ -479,7 +479,7 @@
 
   function renderHelp() {
     var items = [
-      ['政策问答', '「港澳台客户做平安可以吗？」「营运车怎么做分期？」「费率和利率的区别？」'],
+      ['政策问答', '「港澳台客户做安澜可以吗？」「营运车怎么做分期？」「费率和利率的区别？」'],
       ['方案咨询', '直接描述客户情况，例如「42岁港澳台客户，60期，首付25%，征信A，哪家能做？」'],
       ['流程跟进', '「客户催审批进度怎么办？」「H5 填写中断？」— 给出口径 + 跟进路径 + 话术。'],
     ];
@@ -834,12 +834,12 @@
    * ------------------------------------------------------------------ */
 
   console.log(
-    '%cXpeng Smart Select 4.0 %c· FI 智能助手',
+    '%cSmartSelect 4.0 %c· FI 智能助手',
     'background:#0B6FE8;color:#fff;padding:2px 6px;border-radius:4px;font-weight:600',
     'color:#6B7686'
   );
   console.log(
-    '规则引擎已就绪：%d 家机构 / %d 类结构化规则 / 原文片段 %d 段（全部来自《金融百宝箱》）',
+    '规则引擎已就绪：%d 家机构 / %d 类结构化规则 / 原文片段 %d 段（全部来自《金融顾问手册》）',
     E.allInstitutions().length,
     Object.keys(KB).filter(function (k) { return k !== 'doc'; }).length,
     (KB.doc && KB.doc.chunks ? KB.doc.chunks.length : 0)
