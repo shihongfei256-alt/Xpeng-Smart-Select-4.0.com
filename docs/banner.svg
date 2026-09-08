@@ -1,0 +1,59 @@
+<svg width="1200" height="280" viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020806"/>
+      <stop offset="1" stop-color="#0a1a14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect width="1200" height="280" fill="url(#glow)"/>
+
+  <g fill="#1f3d33" opacity="0.4">
+    <circle cx="60" cy="60" r="1.2"/><circle cx="120" cy="60" r="1.2"/><circle cx="180" cy="60" r="1.2"/>
+    <circle cx="60" cy="120" r="1.2"/><circle cx="120" cy="120" r="1.2"/><circle cx="180" cy="120" r="1.2"/>
+    <circle cx="60" cy="180" r="1.2"/><circle cx="120" cy="180" r="1.2"/><circle cx="180" cy="180" r="1.2"/>
+    <circle cx="1020" cy="80" r="1.2"/><circle cx="1080" cy="80" r="1.2"/><circle cx="1140" cy="80" r="1.2"/>
+    <circle cx="1020" cy="200" r="1.2"/><circle cx="1080" cy="200" r="1.2"/><circle cx="1140" cy="200" r="1.2"/>
+  </g>
+
+  <!-- logo mark -->
+  <g transform="translate(88, 92)">
+    <rect width="96" height="96" rx="22" fill="url(#accent)"/>
+    <text x="48" y="62" font-size="40" font-weight="700" fill="#ffffff" text-anchor="middle">FI</text>
+  </g>
+
+  <text x="224" y="140" font-size="58" font-weight="700" fill="#f0fdf9" letter-spacing="-1">SmartSelect 4.0</text>
+  <text x="226" y="184" font-size="24" fill="#8db8a8">买车办分期，问得清、说得明</text>
+
+  <g font-size="17" fill="#c4d8cf">
+    <rect x="226" y="208" rx="16" width="118" height="32" fill="#123326"/>
+    <text x="285" y="229" text-anchor="middle">政策问答</text>
+    <rect x="356" y="208" rx="16" width="118" height="32" fill="#123326"/>
+    <text x="415" y="229" text-anchor="middle">方案咨询</text>
+    <rect x="486" y="208" rx="16" width="118" height="32" fill="#123326"/>
+    <text x="545" y="229" text-anchor="middle">流程跟进</text>
+    <rect x="616" y="208" rx="16" width="118" height="32" fill="#123326"/>
+    <text x="675" y="229" text-anchor="middle">图片识别</text>
+  </g>
+
+  <!-- pipeline hint -->
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="15">
+    <text x="780" y="140" fill="#34d399">检索</text>
+    <text x="824" y="140" fill="#3f5c50">→</text>
+    <text x="852" y="140" fill="#34d399">规则判定</text>
+    <text x="924" y="140" fill="#3f5c50">→</text>
+    <text x="952" y="140" fill="#5eead4">带引用的回答</text>
+    <text x="780" y="170" fill="#4f7263" font-family="Inter, sans-serif" font-size="15">RAG + 规则引擎 · 答案可追溯 · 无 Key 也可用</text>
+  </g>
+
+  <rect x="0" y="276" width="1200" height="4" fill="url(#accent)"/>
+</svg>
